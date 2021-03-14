@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Edit Data</h2>
+
+<div mat-dialog-content>
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <div class="field">
+      <div class="control">
+        <input class="input" type="text" [ngModel]="todo.text" name="text" placeholder="Type your thing to do here ...">
+      </div>
+    </div>
+
+    <div class="field is-grouped is-grouped-right">
+      <div class="control">
+        <button type="button" class="button is-danger" (click)="close()">Cancel</button>
+      </div>
+      <div class="control">
+        <button type="submit" class="button is-success">Save</button>
+      </div>
+    </div>
+    
+  </form>
+</div>
+
+

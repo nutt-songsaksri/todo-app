@@ -1,0 +1,40 @@
+<section class="heading-section">
+  <h1 class="title is-size-1 has-text-centered">Todos List</h1>
+</section>
+
+<div class="container">
+  
+  <div class="put-todo-box">
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)"> 
+      <h2 class="title is-size-3">Things To Do</h2>
+      <!-- from bulmaform -->
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input ngModel required name="text" class="input" type="text" placeholder="Type your things to do here ...">
+        </p>
+        <p class="control">
+          <button type="submit" class="button">
+            <i class="material-icons">add</i>
+            Add
+          </button>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="todo-list">
+
+      <app-todo-item 
+      *ngFor="let todo of todos" 
+      [todo]="todo" 
+      (todoClicked)="toggleCompleted(todo)"
+      (deleteClicked)="deleteTodo(todo)"
+      (editClicked)="editTodo(todo)"
+      ></app-todo-item>
+      
+    </div>
+  </div>
+</section>

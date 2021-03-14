@@ -1,0 +1,52 @@
+.heading-section {
+  background: #7db1a4;
+  padding: 70px;
+
+  h1.title {
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: 0px 2px 1px rgba(black, 1);
+  }
+}
+
+.container {
+  max-width: 650px !important;
+}
+
+.put-todo-box {
+  background: #f2e8b7;
+  font-family: monospace;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(black, 0.3);
+
+  h2.title {
+    text-align: center;
+  }
+}
+
+.button {
+  background: #ee9667;
+  color: grey;
+  font-weight: 700;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(black, 0.2);
+  }
+
+  &:active {
+    opacity: 2;
+  }
+
+  &:focus {
+    color: white;
+    opacity: 1;
+  }
+  i.material-icons {
+    margin-right: 6px;
+    margin-left: -6px;
+  }
+}
